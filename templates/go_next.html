@@ -1,0 +1,19 @@
+<!--open cv 를 통하여 숫자일치 확인-->
+{% extends "base.html" %}
+
+{% block cv_main_content %}
+<style>
+    .img-container_center{
+        text-align: center;
+    }	
+</style>
+
+<div class="img-container_center">
+    
+        <h3><img src="{{ url_for('cv_video_feed') }}"  width="60%"></h3>	
+</div>
+<div class="img-container_center">
+
+		<h4> <a href="/finish"class="button">확인</a> </h4>
+</div>
+{% endblock %}

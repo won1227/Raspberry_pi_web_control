@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block header_camera%}
+<h2>CAMERA</h2>
+{% endblock %}
+
+
+{% block main_content %}
+<style>
+    .img-container_center{
+		float:center;
+    }	
+</style>
+
+<div class="img-container_center">
+    
+        <h3><img src="{{ url_for('video_feed') }}"  width="60%"></h3>
+    
+	
+</div>
+<div class="img-container_center">
+		<h4> <a href="/go_next"class="button">비교</a> </h4>
+	    <h6> <a href="/go"class="button">go</a> <a href="/tilt/+"class="button">&uarr;</a> <a href="/stop"class="button">stop</a> </h6> 
+        <h6> <a href="/pan/-"class="button">&larr;</a> <a href="/tilt/-"class="button">&darr;</a> <a href="/pan/+"class="button">&rarr;</a> </h6>  
+</div>
+
+{% endblock %}
+
+{% block header_room %}
+<h2>ROOM</h2>
+{% endblock %}
+
+{% block room_content %}
+
+<div class="img-container_center">
+    <form action="form_recv" method="post">
+
+        <p>number <input type = "text" name ="number" placeholder="number insert"></p>
+        <p><input type="submit" value="SUBMIT"></p>
+
+    </form>
+</div>
+<br>
+{% endblock %}
+
+{% block nav %} 
+    <nav id="nav">
+        <ul>
+            <li><a href="#camera" class="active">camera</a></li>
+            <li><a href="#room">Room</a></li>
+        </ul>
+    </nav>
+
+{% endblock %}

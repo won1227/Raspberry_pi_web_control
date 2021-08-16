@@ -1,0 +1,14 @@
+<!--값 확인-->
+
+{% extends "base.html" %}
+{% block title %} <p>&bull; 결과창 &bull; </p><hr>{% endblock %}
+{% block content %}
+
+{% for v in pz_data.items('number') %}
+
+        <h2> &bull; 호실 </h2>
+        <h3> &deg;&nbsp;{{v}} ROOM&deg;&nbsp;</h3>
+        <hr><br>
+
+{% endfor %}
+{% endblock %}
